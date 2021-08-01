@@ -14,7 +14,7 @@ A VSCode remote capable container that contains gcc, clang, and conan package ma
 
 Below is a sample .devcontainer file that you can use for your project. It includes an example on how to add your own conan remote.
 
-```json
+```jsonc
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.187.0/containers/cpp
 {
