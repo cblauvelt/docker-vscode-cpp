@@ -19,7 +19,7 @@ Below is a sample .devcontainer file that you can use for your project. It inclu
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.187.0/containers/cpp
 {
   "name": "C++",
-  "image": "vscode-cpp",
+  "image": "cblauvelt/vscode-cpp",
   "runArgs": ["--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined"],
   // Set *default* container specific settings.json values on container create.
   "settings": {},
