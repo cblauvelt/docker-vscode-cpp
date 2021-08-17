@@ -8,7 +8,8 @@ A VSCode remote capable container that contains gcc, clang, and conan package ma
 | ------- | ----------------------------------------- |
 | GCC     | gcc (Ubuntu 10.3.0-1ubuntu1~20.04) 10.3.0 |
 | Clang   | clang version 11.0.0-2~ubuntu20.04.1      |
-| CMake   | cmake version 3.18.2                      |
+| CMake   | cmake version 3.21.1                      |
+| Conan   | Conan version 1.39.0                      |
 
 ## Example devcontainer file
 
@@ -19,7 +20,7 @@ Below is a sample .devcontainer file that you can use for your project. It inclu
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.187.0/containers/cpp
 {
   "name": "C++",
-  "image": "vscode-cpp",
+  "image": "cblauvelt/vscode-cpp",
   "runArgs": ["--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined"],
   // Set *default* container specific settings.json values on container create.
   "settings": {},
