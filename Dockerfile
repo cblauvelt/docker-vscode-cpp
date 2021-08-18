@@ -4,14 +4,11 @@ FROM mcr.microsoft.com/vscode/devcontainers/base:0-ubuntu-20.04
 
 ENV GCC_VERSION=10 \
     CLANG_VERSION=11 \
-    CONAN_VERSION="1.38.0" \
+    CONAN_VERSION="1.39.0" \
     CONAN_PKG_VERSION="0.35.1" \
-    CMAKE_VERSION_FULL=3.18.2 \
+    CMAKE_VERSION_FULL="3.21.1.post1" \
     CC=/usr/bin/gcc \
     CXX=/usr/bin/g++ \
-    PYENV_ROOT=/opt/pyenv \
-    PYTHON_VERSION=3.7.5 \
-    PATH=/opt/pyenv/shims:${PATH} \
     DEBIAN_FRONTEND=noninteractive
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]

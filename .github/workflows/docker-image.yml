@@ -1,12 +1,22 @@
-name: Docker Image CI
+name: Docker Build
 
 on:
   push:
-    branches: [main, develop]
+    branches: [develop]
+
   pull_request:
-    branches: [main]
+    branches: [develop]
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: hadolint/hadolint-action@v1.5.0
+        with:
+          dockerfile: Dockerfile
+
   build:
     runs-on: ubuntu-latest
 
