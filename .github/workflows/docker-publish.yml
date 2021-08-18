@@ -20,7 +20,7 @@ env:
   IMAGE_NAME: cblauvelt/vscode-cpp
 
 jobs:
-  build:
+  build-and-publish:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -29,6 +29,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+
+      - name: Check for linting errors
+      - uses: hadolint/hadolint-action@v1.5.0
+        with:
+          dockerfile: Dockerfile
 
       # Login against a Docker registry except on PR
       # https://github.com/docker/login-action
