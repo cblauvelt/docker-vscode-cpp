@@ -4,9 +4,9 @@ FROM mcr.microsoft.com/vscode/devcontainers/base:0-ubuntu-20.04
 
 ENV GCC_VERSION=10 \
     CLANG_VERSION=11 \
-    CONAN_VERSION="1.39.0" \
+    CONAN_VERSION="1.40.3" \
     CONAN_PKG_VERSION="0.35.1" \
-    CMAKE_VERSION_FULL="3.21.1.post1" \
+    CMAKE_VERSION_FULL="3.21.2" \
     CC=/usr/bin/gcc \
     CXX=/usr/bin/g++ \
     DEBIAN_FRONTEND=noninteractive
@@ -61,10 +61,8 @@ RUN apt-get -qq update \
     && curl -fL https://getcli.jfrog.io | sh \
     && mv jfrog /usr/local/bin/jfrog \
     && chmod +x /usr/local/bin/jfrog \
-    && groupadd 1001 -g 1001 \
-    && groupadd 2000 -g 2000 \
-    && groupadd 999 -g 999 \
-    && usermod -aG 1001,2000,999 vscode \
     && pip install -q --upgrade --no-cache-dir pip==21.2.1 \
     && pip install -q --no-cache-dir conan==${CONAN_VERSION} conan-package-tools==${CONAN_PKG_VERSION} cmake==${CMAKE_VERSION_FULL}
     
+
+COPY default-profile /home/vscode/.conan/profiles/default

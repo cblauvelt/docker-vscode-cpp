@@ -6,12 +6,18 @@
         {
             "label": "docker build",
             "type": "shell",
-            "command": "docker build -t cblauvelt/vscode-cpp .",
+            "command": "docker build -t cblauvelt/vscode-cpp:latest .",
             "problemMatcher": [],
             "group": {
                 "kind": "build",
                 "isDefault": true
             }
+        },
+        {
+            "label": "docker lint",
+            "type": "shell",
+            "command": "docker run --rm -i hadolint/hadolint < Dockerfile",
+            "problemMatcher": []
         }
     ]
 }
