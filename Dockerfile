@@ -4,9 +4,9 @@ FROM mcr.microsoft.com/vscode/devcontainers/base:0-ubuntu-20.04
 
 ENV GCC_VERSION=10 \
     CLANG_VERSION=11 \
-    CONAN_VERSION="1.40.3" \
-    CONAN_PKG_VERSION="0.35.1" \
-    CMAKE_VERSION_FULL="3.21.2" \
+    CONAN_VERSION="1.44.1" \
+    CONAN_PKG_VERSION="0.37.0" \
+    CMAKE_VERSION_FULL="3.22.2" \
     CC=/usr/bin/gcc \
     CXX=/usr/bin/g++ \
     DEBIAN_FRONTEND=noninteractive
